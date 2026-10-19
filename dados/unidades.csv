@@ -1,0 +1,9 @@
+id_unidade,nome_unidade,capacidade_leitos
+1,UTI Adulto,20
+2,UTI Neonatal,10
+3,Clínica Médica,40
+4,Clínica Cirúrgica,30
+5,Ortopedia,20
+6,Pediatria,25
+7,Maternidade,25
+8,Pronto-Socorro,15
