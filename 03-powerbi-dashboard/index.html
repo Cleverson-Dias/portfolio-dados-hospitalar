@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Painel de internações e capacidade hospitalar com dados simulados.">
+  <title>Indicadores hospitalares</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="dashboard.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <a class="back" href="https://github.com/Cleverson-Dias/portfolio-dados-hospitalar">← Portfólio de dados</a>
+      <h1>Indicadores hospitalares</h1>
+      <p>Internações, capacidade de leitos, espera e infecções em uma base fictícia.</p>
+    </header>
+    <form aria-label="Filtros do painel">
+      <label>Início <input id="start" type="date" required></label>
+      <label>Fim <input id="end" type="date" required></label>
+      <label>Unidade <select id="unit"><option value="">Todas</option></select></label>
+      <button type="reset">Limpar filtros</button>
+    </form>
+    <p id="status" role="status">Carregando a base hospitalar…</p>
+    <div id="dashboard" hidden>
+      <dl id="cards" class="cards" aria-label="Indicadores do período"></dl>
+      <section class="panel trend" aria-labelledby="trend-title">
+        <div class="section-heading">
+          <h2 id="trend-title">Evolução mensal</h2>
+          <label>Indicador <select id="metric"></select></label>
+        </div>
+        <div id="chart" class="chart"></div>
+        <p id="scale" class="note"></p>
+      </section>
+      <section class="panel" aria-labelledby="units-title">
+        <h2 id="units-title">Comparação por unidade</h2>
+        <div class="table-scroll" tabindex="0" role="region" aria-labelledby="units-title">
+          <table>
+            <thead><tr><th scope="col">Unidade</th><th scope="col">Leitos</th><th scope="col">Internações</th><th scope="col">Ocupação</th><th scope="col">Permanência</th><th scope="col">Espera</th><th scope="col">Infecção</th></tr></thead>
+            <tbody id="units"></tbody>
+          </table>
+        </div>
+      </section>
+      <details class="panel">
+        <summary>Como os indicadores são calculados</summary>
+        <p>Internações, permanência média, espera média e infecção usam as internações que começaram no período. A permanência considera o tempo completo entre entrada e saída. A taxa de infecção usa o número de internações com infecção dividido pelo total de internações.</p>
+        <p>A ocupação usa o tempo ocupado por leito dentro do período, inclusive por internações que começaram antes do filtro, dividido pela capacidade disponível no mesmo intervalo. Sobreposições de registros no mesmo leito contam uma vez.</p>
+      </details>
+    </div>
+  </main>
+</body>
+</html>

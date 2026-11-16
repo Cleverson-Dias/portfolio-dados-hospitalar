@@ -11,7 +11,7 @@ conjunto de dados **fictícios** de um hospital: do dado bruto até o dashboard.
 |---|---------|-------------|----------------|
 | 1 | [Limpeza e relatório automatizado](01-python-limpeza/) | Python, pandas | Como transformar uma base suja em uma base confiável e gerar um relatório automaticamente? |
 | 2 | [Análise com SQL](02-sql-analise/) | SQL | Quais unidades têm maior tempo médio de internação? Onde estão as infecções? Quem espera mais? |
-| 3 | [Dashboard de indicadores](03-powerbi-dashboard/) | Power BI | Como acompanhar internações, ocupação de leitos, tempo de espera e infecções num só painel? |
+| 3 | [Dashboard de indicadores](03-powerbi-dashboard/) | HTML, CSS, JavaScript | Como acompanhar internações, ocupação de leitos, tempo de espera e infecções num só painel? |
 
 ## Fluxo dos dados
 
